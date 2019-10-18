@@ -1,4 +1,4 @@
-var server = "http://localhost/html8/tourism_bkt/";
+var server = "http://localhost/html/tourism_bkt/";
 var drawingManager;
 var selectedShape;
 var markers = [];

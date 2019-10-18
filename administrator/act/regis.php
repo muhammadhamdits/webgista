@@ -10,7 +10,7 @@ $role = "C";
 $emailadd = $_POST['email'];
 
     $query = "insert into admin (username, password, hp, address, name, email, role) values ('".$username."','".$password."','".$cp."','".$address."','".$nama."','".$emailadd.",$role')";
-    header('location:http://localhost/html8/tourism_bkt/admin/login.php');
+    header('location:http://localhost/html/tourism_bkt/admin/login.php');
 
     $cek = mysqli_query($conn, $query);
   
