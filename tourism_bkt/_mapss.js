@@ -1,4 +1,4 @@
-var server = "http://localhost/html/tourism_bkt/";
+var server = "http://webgista.ddns.net/tourism_bkt/";
 var drawingManager;
 var selectedShape;
 var markers = [];

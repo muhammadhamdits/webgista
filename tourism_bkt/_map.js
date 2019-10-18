@@ -1,5 +1,5 @@
         var map;
-        var server = "http://localhost/html/tourism_bkt/";
+        var server = "http://webgista.ddns.net/tourism_bkt/";
         var cekRadiusStatus = "off";   //RADIUS
         var circles = []; //RADIUS
         var rad; //RADIUS

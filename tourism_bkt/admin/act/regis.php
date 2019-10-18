@@ -35,7 +35,7 @@ else
   
   if($cek)
   {
-    header('location:http://localhost/html/tourism_bkt/admin/login.php');
+    header('location:http://webgista.ddns.net/tourism_bkt/admin/login.php');
     require '../../../PHPMailer/class.phpmailer.php';
   
     $mail = new PHPMailer(); // create a new object

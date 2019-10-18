@@ -31,7 +31,7 @@
 		</div>
 		<div id="badan">
 			<p>Click the link below to verify your account</p>
-			<a href="http://localhost/html/hotel_bkt/admin/pages/verifikasi.php?token=<?php echo $_GET['token']?>&user=<?php echo $_GET['user']?>">Click on this link to confirm your email</a> <!-- EDIT UNTUK HOSTING -->
+			<a href="http://webgista.ddns.net/hotel_bkt/admin/pages/verifikasi.php?token=<?php echo $_GET['token']?>&user=<?php echo $_GET['user']?>">Click on this link to confirm your email</a> <!-- EDIT UNTUK HOSTING -->
 		</div>
 		<div id="kaki">
 			<h3>end of discusion</h3>

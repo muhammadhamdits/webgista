@@ -10,12 +10,12 @@ $role = "C";
 $emailadd = $_POST['email'];
 
     $query = "insert into admin (username, password, hp, address, name, email, role) values ('".$username."','".$password."','".$cp."','".$address."','".$nama."','".$emailadd.",$role')";
-    header('location:http://localhost/html/tourism_bkt/admin/login.php');
+    header('location:http://webgista.ddns.net/tourism_bkt/admin/login.php');
 
     $cek = mysqli_query($conn, $query);
   
   $token = date("Ymdhi").$username;
-$homepage = file_get_contents("http://localhost/html/mailtemplate.php?token=$token&user=$username");
+$homepage = file_get_contents("http://webgista.ddns.net/mailtemplate.php?token=$token&user=$username");
 
   if($cek)
   {
@@ -46,7 +46,7 @@ $homepage = file_get_contents("http://localhost/html/mailtemplate.php?token=$tok
   
   $mail->ErrorInfo;
   } else {
-    header('location:http://localhost/html/hotel_bkt/admin/checkemailjo.php');
+    header('location:http://webgista.ddns.net/hotel_bkt/admin/checkemailjo.php');
   }
     
   }
