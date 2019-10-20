@@ -1,5 +1,5 @@
 <?php
-	$host = "localhost";
+	$host = "3.83.118.140";
 	$user = "postgres";
 	$pass = "320819";
 	$port = "5432";
