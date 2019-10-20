@@ -4,5 +4,8 @@
 	$pass = "320819";
 	$port = "5432";
 	$dbname = "tugas";
-	$conn = pg_connect("host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$pass) or die("Gagal");
+	$connectionstring = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$pass;
+	var_dump($connectionstring);
+	die();
+	$conn = pg_connect($connectionstring) or die("Gagal");
 ?>
