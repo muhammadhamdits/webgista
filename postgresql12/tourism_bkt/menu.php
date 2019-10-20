@@ -64,15 +64,15 @@
                             <li style="margin-top:10px">
                             <select class="form-control kota text-center" style="width:100%;margin-top:10px" id="select_jenis">
                               <?php                      
-                              require_once('../connect.php');    
-                              $querysearch="SELECT id, name FROM tourism_type"; 
-                              $hasil=pg_query($querysearch);
+                              // require_once('../connect.php');    
+                              // $querysearch="SELECT id, name FROM tourism_type"; 
+                              // $hasil=pg_query($querysearch);
 
-                                while($baris = pg_fetch_array($hasil)){
-                                    $id=$baris['id'];
-                                    $name=$baris['name'];
-                                    echo "<option value='$id'>$name</option>";
-                                }
+                              //   while($baris = pg_fetch_array($hasil)){
+                              //       $id=$baris['id'];
+                              //       $name=$baris['name'];
+                              //       echo "<option value='$id'>$name</option>";
+                              //   }
                               ?>
                             </select>
                             </li>                             
