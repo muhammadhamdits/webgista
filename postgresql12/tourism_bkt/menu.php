@@ -64,7 +64,7 @@
                             <li style="margin-top:10px">
                             <select class="form-control kota text-center" style="width:100%;margin-top:10px" id="select_jenis">
                               <?php                      
-                              include('../connect.php');    
+                              require_once('../connect.php');    
                               $querysearch="SELECT id, name FROM tourism_type"; 
                               $hasil=pg_query($querysearch);
 
