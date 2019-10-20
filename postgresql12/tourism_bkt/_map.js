@@ -46,7 +46,7 @@
           }
 
         function basemap(){   // GOOGLE MAP
-          map = new google.maps.Map(document.getElementById('map'), 
+          map = new google.maps.Map(document.getElementById('peta'), 
               {
                 zoom: 13,
                 center: new google.maps.LatLng(-0.3051596, 100.3673319),

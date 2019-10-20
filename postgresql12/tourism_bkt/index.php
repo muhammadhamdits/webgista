@@ -224,7 +224,7 @@ session_start();
                            <div class="row">
                              <div class="col-sm-6 col-xs-6"></div>
                            </div>                        
-                           <div id="map" class="centered" style="height:460px">
+                           <div id="peta" class="centered" style="height:460px">
                            </div>
                         </div>
                       </div><!-- /col-md-12 -->                  
