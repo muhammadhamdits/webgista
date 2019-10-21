@@ -5,7 +5,9 @@
     $longi = $_GET['lng'];
 	$rad=$_GET['rad'];
 
-	$querysearch="SELECT id, name, st_x(st_centroid(geom)) as lng, st_y(st_centroid(geom)) as lat, st_distance_sphere(ST_GeomFromText('POINT(".$longi." ".$latit.")',-1), geom) as jarak FROM culinary_place where st_distance_sphere(ST_GeomFromText('POINT(".$longi." ".$latit.")',-1), geom) <= ".$rad.""; 
+    // $querysearch="SELECT id, name, st_x(st_centroid(geom)) as lng, st_y(st_centroid(geom)) as lat, st_distance_sphere(ST_GeomFromText('POINT(".$longi." ".$latit.")',-1), geom) as jarak FROM culinary_place where st_distance_sphere(ST_GeomFromText('POINT(".$longi." ".$latit.")',-1), geom) <= ".$rad.""; 
+    
+    $querysearch = "SELECT id, name, st_x(st_centroid(geom)) as lng, st_y(st_centroid(geom)) as lat, round(CAST(ST_DistanceSpheroid(ST_GeomFromText('POINT($longi $latit)'),culinary_place.geom,'SPHEROID[\"WGS 84\",6378137,298.257223563]')As numeric),2) As jarak FROM culinary_place WHERE round(CAST(ST_DistanceSpheroid(ST_GeomFromText('POINT($longi $latit)'),culinary_place.geom,'SPHEROID[\"WGS 84\",6378137,298.257223563]')As numeric),2) <= $rad";
 
 	$hasil=pg_query($querysearch);
 
