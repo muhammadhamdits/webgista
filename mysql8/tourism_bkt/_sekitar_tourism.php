@@ -1,5 +1,4 @@
 <?php
-
 	include('../connect.php');
     $latit = $_GET['lat'];
     $longi = $_GET['lng'];
@@ -15,12 +14,16 @@
 
     $query = "SELECT id, name, ST_X(ST_Centroid(geom)) AS lng, ST_Y(ST_CENTROID(geom)) As lat FROM tourism";
     $h=mysqli_query($conn, $query);
+    
+    var_dump($h);
+    die();
+    
     while($d = mysqli_fetch_assoc($h)){
         $id[]   = $d['id'];
         $name[] = $d['name'];
         $lt[]   = $d['lat'];
         $ln[]   = $d['lng'];
-}
+    }
     $i=0;
     foreach($lt as $lats){
         $longs = $ln[$i];
