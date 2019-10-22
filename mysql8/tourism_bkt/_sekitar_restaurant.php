@@ -1,6 +1,5 @@
 <?php
-    include('../connect.php');
-    error_reporting(0);
+	include('../connect.php');
     $latit = $_GET['lat'];
     $longi = $_GET['lng'];
 	$rad=$_GET['rad'];
@@ -27,7 +26,7 @@
         
         $q = "SELECT st_distance(ST_GeomFromText('POINT($latit $longi)', 4326), ST_GeomFromText('POINT($lats $longs)', 4326))*111194 as jarak FROM restaurant";
         $hasil=mysqli_query($conn, $q);
-        $data = mysqli_fetch_assoc($hasil);
+        $data = mysqli_fetch_array($hasil);
         $jarak[] = $data['jarak'];
         $i++;
     }
