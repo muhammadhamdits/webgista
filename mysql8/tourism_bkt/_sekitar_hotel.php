@@ -25,7 +25,7 @@
     foreach($lt as $lats){
         $longs = $ln[$i];
         
-        $q = "SELECT st_distance_sphere(ST_GeomFromText('POINT($latit $longi)', 4326), ST_GeomFromText('POINT($lats $longs)', 4326)) as jarak FROM hotel";
+        $q = "SELECT st_distance(ST_GeomFromText('POINT($latit $longi)', 4326), ST_GeomFromText('POINT($lats $longs)', 4326))*111194 as jarak FROM hotel";
         $hasil=mysqli_query($conn, $q);
         $data = mysqli_fetch_assoc($hasil);
         $jarak[] = $data['jarak'];

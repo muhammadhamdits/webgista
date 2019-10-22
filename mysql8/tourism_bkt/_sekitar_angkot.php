@@ -5,7 +5,7 @@
     $longi = $_GET['long'];
 	$rad=$_GET['rad'];
 
-	$querysearch="SELECT id, route_color, destination, st_distance_sphere(ST_GeomFromText('POINT(".$longi." ".$latit.")',-1), geom) as jarak FROM angkot where st_distance_sphere(ST_GeomFromText('POINT(".$longi." ".$latit.")',-1), geom) <= ".$rad.""; 
+	$querysearch="SELECT id, route_color, destination, st_distance(ST_GeomFromText('POINT(".$longi." ".$latit.")',-1), geom)*111194 as jarak FROM angkot where st_distance(ST_GeomFromText('POINT(".$longi." ".$latit.")',-1), geom)*111194 <= ".$rad.""; 
 	$hasil=mysqli_query($conn, $querysearch);
 
     while($baris = mysqli_fetch_array($hasil)){
